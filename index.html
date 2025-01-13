@@ -83,7 +83,7 @@
             border-radius: 5px;
             font-weight: bold;
             transition: all 0.3s ease;
-            animation: pulse 2s infinite; /* Subtle button animation */
+            animation: pulse 2.5s infinite; /* Subtle animation */
         }
 
         .hero-text .btn-primary:hover {
@@ -163,6 +163,34 @@
             margin-bottom: 0.5em;
         }
 
+        .features div h2::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 2px;
+            background-color: #28a745;
+            margin: 0.5em auto;
+        }
+
+        /* Welcome Section */
+        .welcome {
+            text-align: center;
+            padding: 2em 1em;
+            background-color: #f9f9f9;
+        }
+
+        .welcome h2 {
+            font-size: 2em;
+            color: #003366;
+            margin-bottom: 0.5em;
+        }
+
+        .welcome p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.5;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -218,4 +246,35 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
-               
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h2>Welcome to GM Field Services LLC</h2>
+            <p>At GM Field Services, we specialize in property preservation, maintenance, and landscaping tailored to meet the unique needs of the Puerto Rican market. Our commitment to excellence ensures that your properties remain in pristine condition, helping you stand out in the industry.</p>
+        </section>
+        <section class="features">
+            <div>
+                <img src="maintenance-icon.png" alt="Maintenance Icon">
+                <h2>Property Maintenance</h2>
+                <p>Top-notch property maintenance services tailored to your needs.</p>
+            </div>
+            <div>
+                <img src="landscaping-icon.png" alt="Landscaping Icon">
+                <h2>Landscaping</h2>
+                <p>Beautiful landscaping solutions for residential and commercial properties.</p>
+            </div>
+            <div>
+                <img src="preservation-icon.png" alt="Preservation Icon">
+                <h2>Property Preservation</h2>
+                <p>Ensuring your properties are in pristine condition.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 GM Field Services LLC | <a href="contact.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>
