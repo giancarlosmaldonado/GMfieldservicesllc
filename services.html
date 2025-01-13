@@ -22,6 +22,35 @@
             color: #fff;
         }
 
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #002a4a;
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1.5em;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            color: #28a745;
+        }
+
         .logo-container {
             text-align: center;
             padding: 1em 0;
@@ -35,7 +64,7 @@
         .hero {
             position: relative;
             text-align: center;
-            padding: 4em 0; /* Increased padding */
+            padding: 4em 0;
         }
 
         .hero img {
@@ -50,7 +79,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
 
@@ -66,7 +95,7 @@
 
         .hero-text h1 {
             font-size: 2.5em;
-            margin-bottom: 1em; /* Increased spacing */
+            margin-bottom: 1em;
         }
 
         .hero-text p {
@@ -84,28 +113,15 @@
             border-radius: 5px;
             font-weight: bold;
             transition: all 0.3s ease;
-            animation: pulse 2s infinite; /* Subtle animation */
         }
 
         .hero-text a:hover {
             background-color: #1e7e34;
         }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
         /* Services Section */
         .services {
-            padding: 4em 1em; /* Increased padding for better spacing */
+            padding: 4em 1em;
             background: #f9f9f9;
         }
 
@@ -131,33 +147,16 @@
             width: 30%;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .service-item:nth-child(even) {
-            background: #f7f7f7; /* Alternating background color */
-        }
-
-        .service-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .service-item img {
-            max-width: 120px; /* Slightly larger icons */
+            max-width: 120px;
             margin-bottom: 1em;
         }
 
         .service-item h3 {
             font-size: 1.5em;
             margin-bottom: 0.5em;
-            position: relative;
-            transition: color 0.3s ease; /* Smooth hover effect */
-        }
-
-        .service-item h3:hover {
-            color: #28a745;
-            cursor: pointer;
         }
 
         .service-item h3::after {
@@ -171,7 +170,6 @@
 
         .service-item p {
             font-size: 1em;
-            line-height: 1.5;
             margin-bottom: 1em;
         }
 
@@ -180,54 +178,30 @@
             background-color: #28a745;
             color: #fff;
             text-decoration: none;
-            padding: 0.75em 1.5em;
+            padding: 0.5em 1em;
             border-radius: 5px;
             font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            animation: pulse 2s infinite; /* Subtle animation */
         }
 
         .service-item a:hover {
             background-color: #1e7e34;
-            transform: scale(1.1);
         }
 
         /* Footer */
         footer {
             text-align: center;
-            background: linear-gradient(90deg, #003366, #005599); /* Gradient background */
+            background: #003366;
             color: #fff;
             padding: 1.5em 0;
-            font-size: 0.9em;
         }
 
         footer a {
             color: #fff;
             text-decoration: none;
-            font-weight: bold;
         }
 
         footer a:hover {
             text-decoration: underline;
-        }
-
-        footer p {
-            margin: 0.5em 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .service-item {
-                width: 100%;
-            }
-
-            .hero-text h1 {
-                font-size: 2em;
-            }
-
-            .hero-text p {
-                font-size: 1em;
-            }
         }
     </style>
 </head>
@@ -235,14 +209,6 @@
     <header>
         <div class="logo-container">
             <img src="logo.png" alt="GM Field Services Logo" class="logo">
-        </div>
-        <div class="hero">
-            <img src="services-banner.jpg" alt="Our Services">
-            <div class="hero-text">
-                <h1>Our Services</h1>
-                <p>Discover how we can help maintain, preserve, and enhance your properties.</p>
-                <a href="contact.html" class="button-primary">Get in Touch</a>
-            </div>
         </div>
         <nav>
             <ul>
@@ -254,6 +220,14 @@
             </ul>
         </nav>
     </header>
+    <div class="hero">
+        <img src="services-banner.jpg" alt="Our Services">
+        <div class="hero-text">
+            <h1>Our Services</h1>
+            <p>Discover how we can help maintain, preserve, and enhance your properties.</p>
+            <a href="contact.html">Get in Touch</a>
+        </div>
+    </div>
     <main>
         <section class="services">
             <h2>Our Services</h2>
@@ -262,27 +236,25 @@
                     <img src="maintenance-icon.png" alt="Maintenance Icon">
                     <h3>Property Maintenance</h3>
                     <p>We ensure your properties are secure and in compliance with industry standards.</p>
-                    <a href="contact.html" class="button-primary">Get Started</a>
+                    <a href="contact.html">Get Started</a>
                 </div>
                 <div class="service-item">
                     <img src="landscaping-icon.png" alt="Landscaping Icon">
                     <h3>Landscaping</h3>
                     <p>Beautiful landscaping solutions for residential and commercial properties.</p>
-                    <a href="contact.html" class="button-primary">Learn More</a>
+                    <a href="contact.html">Learn More</a>
                 </div>
                 <div class="service-item">
                     <img src="preservation-icon.png" alt="Preservation Icon">
                     <h3>Property Preservation</h3>
                     <p>Comprehensive solutions to keep your property in top shape.</p>
-                    <a href="contact.html" class="button-primary">Contact Us</a>
+                    <a href="contact.html">Contact Us</a>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>© 2025 GM Field Services LLC</p>
-        <p>Committed to excellence in property preservation and landscaping.</p>
-        <p><a href="contact.html">Contact Us</a></p>
+        <p>© 2025 GM Field Services LLC | <a href="contact.html">Contact Us</a></p>
     </footer>
 </body>
 </html>
