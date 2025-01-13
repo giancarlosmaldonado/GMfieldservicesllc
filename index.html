@@ -7,6 +7,157 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+        }
+
+        /* Logo Styling */
+        .logo-container {
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .logo {
+            max-width: 150px;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-text h1 {
+            font-size: 2.5em;
+        }
+
+        .hero-text .btn-primary {
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.75em 1.5em;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .hero-text .btn-primary:hover {
+            background-color: #218838;
+        }
+
+        /* Navigation Styling */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #002a4a;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2em;
+            background: #fff;
+        }
+
+        .features div {
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 1.5em;
+            margin: 1em;
+            text-align: center;
+            width: 30%;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .features div img {
+            max-width: 80px;
+            margin-bottom: 1em;
+        }
+
+        .features div h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #003366;
+            color: #fff;
+            padding: 1em 0;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .features div {
+                width: 100%;
+                margin: 1em 0;
+            }
+
+            .hero-text h1 {
+                font-size: 2em;
+            }
+
+            .hero-text .btn-primary {
+                padding: 0.5em 1em;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
