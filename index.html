@@ -65,11 +65,13 @@
         }
 
         .hero-text h1 {
-            font-size: 2.5em;
+            font-size: 3em;
+            margin-bottom: 0.5em;
         }
 
         .hero-text p {
-            font-size: 1.2em;
+            font-size: 1.5em; /* Larger tagline for better visibility */
+            font-weight: 300;
             margin: 0.5em 0;
         }
 
@@ -81,11 +83,24 @@
             border-radius: 5px;
             font-weight: bold;
             transition: all 0.3s ease;
+            animation: pulse 1.5s infinite; /* Subtle button animation */
         }
 
         .hero-text .btn-primary:hover {
             transform: scale(1.1);
             background-color: #1e7e34;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
 
         /* Navigation Styling */
@@ -117,7 +132,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            padding: 2em;
+            padding: 3em 1em; /* Increased padding for spacing */
             background: #fff;
         }
 
@@ -134,7 +149,7 @@
         }
 
         .features div img {
-            max-width: 80px;
+            max-width: 100px; /* Larger icons */
             margin-bottom: 1em;
         }
 
@@ -144,7 +159,7 @@
         }
 
         .features div h2 {
-            font-size: 1.5em;
+            font-size: 1.8em; /* Slightly larger headings */
             margin-bottom: 0.5em;
         }
 
@@ -153,7 +168,7 @@
             text-align: center;
             background: #003366;
             color: #fff;
-            padding: 1em 0;
+            padding: 1.5em 0; /* Improved padding */
             font-size: 0.9em;
         }
 
@@ -175,7 +190,7 @@
             }
 
             .hero-text h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
 
             .hero-text .btn-primary {
