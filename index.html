@@ -22,7 +22,35 @@
             color: #fff;
         }
 
-        /* Logo Styling */
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #002a4a;
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1.5em;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            color: #28a745;
+        }
+
         .logo-container {
             text-align: center;
             padding: 1em 0;
@@ -32,10 +60,11 @@
             max-width: 150px;
         }
 
-        /* Hero Section Styling */
+        /* Hero Section */
         .hero {
             position: relative;
             text-align: center;
+            padding: 4em 0;
         }
 
         .hero img {
@@ -50,7 +79,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
 
@@ -60,22 +89,23 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: #fff;
-            z-index: 2; /* Above overlay */
+            z-index: 2;
             text-align: center;
         }
 
         .hero-text h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 1em;
         }
 
         .hero-text p {
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: 300;
-            margin: 0.5em 0 1em 0;
+            margin-bottom: 1em;
         }
 
-        .hero-text .btn-primary {
+        .hero-text a {
+            display: inline-block;
             background-color: #28a745;
             color: #fff;
             text-decoration: none;
@@ -83,94 +113,33 @@
             border-radius: 5px;
             font-weight: bold;
             transition: all 0.3s ease;
-            animation: pulse 2.5s infinite; /* Subtle animation */
         }
 
-        .hero-text .btn-primary:hover {
-            transform: scale(1.1);
+        .hero-text a:hover {
             background-color: #1e7e34;
         }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
+        /* Services Section */
+        .services {
+            padding: 4em 1em;
+            background: #f9f9f9;
         }
 
-        /* Navigation Styling */
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            background-color: #002a4a;
-        }
-
-        nav ul li {
-            margin: 0 1em;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Welcome Section */
-        .welcome {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 2em 1em;
-            background: linear-gradient(to right, #e6f7ff, #f4f4f4); /* Gradient background */
-        }
-
-        .welcome-text {
-            flex: 1;
-            padding-right: 1em;
-        }
-
-        .welcome-text h2 {
+        .services h2 {
+            text-align: center;
             font-size: 2em;
             color: #003366;
-            margin-bottom: 0.5em;
+            margin-bottom: 2em;
         }
 
-        .welcome-text p {
-            font-size: 1.2em;
-            color: #555;
-            line-height: 1.5;
-        }
-
-        .welcome img {
-            flex: 1;
-            max-width: 350px; /* Reduced size for better balance */
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* Features Section */
-        .features {
+        .services-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            padding: 3em 1em;
-            background: #fff;
         }
 
-        .features div {
-            background: #f9f9f9;
+        .service-item {
+            background: #fff;
             border: 1px solid #ccc;
             padding: 1.5em;
             margin: 1em;
@@ -178,28 +147,19 @@
             width: 30%;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease-in-out;
         }
 
-        .features div img {
-            background-color: #f4f4f4; /* Subtle circular background */
-            padding: 1em;
-            border-radius: 50%;
-            max-width: 80px;
+        .service-item img {
+            max-width: 120px;
             margin-bottom: 1em;
         }
 
-        .features div:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .features div h2 {
-            font-size: 1.8em;
+        .service-item h3 {
+            font-size: 1.5em;
             margin-bottom: 0.5em;
         }
 
-        .features div h2::after {
+        .service-item h3::after {
             content: '';
             display: block;
             width: 50%;
@@ -208,13 +168,31 @@
             margin: 0.5em auto;
         }
 
+        .service-item p {
+            font-size: 1em;
+            margin-bottom: 1em;
+        }
+
+        .service-item a {
+            display: inline-block;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .service-item a:hover {
+            background-color: #1e7e34;
+        }
+
         /* Footer */
         footer {
             text-align: center;
             background: #003366;
             color: #fff;
             padding: 1.5em 0;
-            font-size: 0.9em;
         }
 
         footer a {
@@ -227,20 +205,40 @@
             text-decoration: underline;
         }
 
-        /* Responsive Design */
+        /* Responsive Design: Adjustments for Mobile Screens */
         @media (max-width: 768px) {
-            .welcome {
+            /* Navigation Bar: Stack links vertically */
+            nav ul {
                 flex-direction: column;
-                text-align: center;
+                align-items: center;
             }
 
-            .welcome-text {
-                padding-right: 0;
+            nav ul li {
+                margin: 0.5em 0;
             }
 
-            .features div {
-                width: 100%;
-                margin: 1em 0;
+            /* Hero Section: Adjust text size and spacing */
+            .hero-text h1 {
+                font-size: 1.8em;
+            }
+
+            .hero-text p {
+                font-size: 1em;
+            }
+
+            .hero-text a {
+                padding: 0.6em 1em;
+                font-size: 0.9em;
+            }
+
+            /* Services Section: Stack cards vertically */
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-item {
+                width: 90%;
             }
         }
     </style>
@@ -250,17 +248,9 @@
         <div class="logo-container">
             <img src="logo.png" alt="GM Field Services Logo" class="logo">
         </div>
-        <div class="hero">
-            <img src="hero-banner.jpg" alt="Well-maintained property">
-            <div class="hero-text">
-                <h1>GM Field Services LLC</h1>
-                <p>Your Trusted Partner in Property Preservation in Puerto Rico</p>
-                <a href="services.html" class="btn-primary">Our Services</a>
-            </div>
-        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -268,29 +258,36 @@
             </ul>
         </nav>
     </header>
+    <div class="hero">
+        <img src="home-banner.jpg" alt="GM Field Services Hero">
+        <div class="hero-text">
+            <h1>GM Field Services LLC</h1>
+            <p>Your Trusted Partner in Property Preservation in Puerto Rico</p>
+            <a href="services.html">Our Services</a>
+        </div>
+    </div>
     <main>
-        <section class="welcome">
-            <div class="welcome-text">
-                <h2>Welcome to GM Field Services LLC</h2>
-                <p>At GM Field Services, we specialize in property preservation, maintenance, and landscaping tailored to meet the unique needs of the Puerto Rican market. Our commitment to excellence ensures that your properties remain in pristine condition, helping you stand out in the industry.</p>
-            </div>
-            <img src="servicing.jpg" alt="Our Services in Action">
-        </section>
-        <section class="features">
-            <div>
-                <img src="maintenance-icon.png" alt="Maintenance Icon">
-                <h2>Property Maintenance</h2>
-                <p>Top-notch property maintenance services tailored to your needs.</p>
-            </div>
-            <div>
-                <img src="landscaping-icon.png" alt="Landscaping Icon">
-                <h2>Landscaping</h2>
-                <p>Beautiful landscaping solutions for residential and commercial properties.</p>
-            </div>
-            <div>
-                <img src="preservation-icon.png" alt="Preservation Icon">
-                <h2>Property Preservation</h2>
-                <p>Ensuring your properties are in pristine condition.</p>
+        <section class="services">
+            <h2>Welcome to GM Field Services LLC</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <img src="maintenance-icon.png" alt="Maintenance Icon">
+                    <h3>Property Maintenance</h3>
+                    <p>We ensure your properties are secure and in compliance with industry standards.</p>
+                    <a href="contact.html">Learn More</a>
+                </div>
+                <div class="service-item">
+                    <img src="landscaping-icon.png" alt="Landscaping Icon">
+                    <h3>Landscaping</h3>
+                    <p>Beautiful landscaping solutions for residential and commercial properties.</p>
+                    <a href="contact.html">Learn More</a>
+                </div>
+                <div class="service-item">
+                    <img src="preservation-icon.png" alt="Preservation Icon">
+                    <h3>Property Preservation</h3>
+                    <p>Comprehensive solutions to keep your property in top shape.</p>
+                    <a href="contact.html">Learn More</a>
+                </div>
             </div>
         </section>
     </main>
