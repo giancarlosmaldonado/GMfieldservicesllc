@@ -5,11 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials - GM Field Services LLC</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #002a4a;
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1.5em;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            color: #28a745;
+        }
+
+        nav ul li a.active {
+            color: #28a745;
+            text-decoration: underline;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .logo {
+            max-width: 150px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 4em 0;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 4em 1em;
+            background: #f9f9f9;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #003366;
+            margin-bottom: 2em;
+        }
+
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: #fff;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .testimonial p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 0 0 1em;
+        }
+
+        .testimonial .author {
+            font-weight: bold;
+            text-align: right;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #003366;
+            color: #fff;
+            padding: 1.5em 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/logo.png" alt="GM Field Services Logo" class="logo">
+            <img src="logo.png" alt="GM Field Services Logo" class="logo">
         </div>
         <nav>
             <ul>
@@ -17,23 +171,37 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="testimonials.html" class="active">Testimonials</a></li>
             </ul>
         </nav>
     </header>
+    <div class="hero">
+        <img src="testimonials-banner.jpg" alt="Testimonials">
+        <div class="hero-text">
+            <h1>Testimonials</h1>
+        </div>
+    </div>
     <main>
-        <h1>What Our Clients Say</h1>
-        <blockquote>
-            <p>"GM Field Services LLC provided exceptional maintenance services. Highly recommend them!"</p>
-            <footer>- Client Name</footer>
-        </blockquote>
-        <blockquote>
-            <p>"Professional and reliable services tailored to our needs."</p>
-            <footer>- Another Client</footer>
-        </blockquote>
+        <section class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p>"GM Field Services LLC has been a game-changer for our property preservation needs. Their professionalism and attention to detail are unmatched."</p>
+                    <p class="author">- Jane Doe, Mortgage Manager</p>
+                </div>
+                <div class="testimonial">
+                    <p>"The team at GM Field Services is reliable and efficient. They truly understand the unique challenges of the Puerto Rican market."</p>
+                    <p class="author">- John Smith, Real Estate Investor</p>
+                </div>
+                <div class="testimonial">
+                    <p>"I’ve worked with many property preservation companies, but GM Field Services LLC stands out for their exceptional service and dedication."</p>
+                    <p class="author">- Maria Lopez, Property Owner</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>© 2025 GM Field Services LLC</p>
+        <p>© 2025 GM Field Services LLC | <a href="contact.html">Contact Us</a></p>
     </footer>
 </body>
 </html>
