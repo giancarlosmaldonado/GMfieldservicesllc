@@ -158,6 +158,31 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5em 0;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8em;
+            }
+
+            .testimonials-container {
+                padding: 0 1em;
+            }
+
+            .testimonial {
+                margin: 1em auto;
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
