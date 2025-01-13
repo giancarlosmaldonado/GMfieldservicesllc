@@ -35,6 +35,7 @@
         .hero {
             position: relative;
             text-align: center;
+            padding: 3em 0; /* Added padding */
         }
 
         .hero img {
@@ -71,19 +72,48 @@
         .hero-text p {
             font-size: 1.2em;
             font-weight: 300;
+            margin-bottom: 1em;
+        }
+
+        .hero-text a {
+            display: inline-block;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.75em 1.5em;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite; /* Subtle animation */
+        }
+
+        .hero-text a:hover {
+            background-color: #1e7e34;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
 
         /* Services Section */
         .services {
             padding: 3em 1em;
-            background: #f9f9f9; /* Subtle background color */
+            background: #f9f9f9;
         }
 
         .services h2 {
             text-align: center;
             font-size: 2em;
             color: #003366;
-            margin-bottom: 2em; /* Increased spacing */
+            margin-bottom: 2em;
         }
 
         .services-container {
@@ -104,19 +134,33 @@
             transition: all 0.3s ease-in-out;
         }
 
+        .service-item:nth-child(even) {
+            background: #f7f7f7; /* Alternating background color */
+        }
+
         .service-item:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .service-item img {
-            max-width: 100px;
+            max-width: 120px; /* Slightly larger icons */
             margin-bottom: 1em;
         }
 
         .service-item h3 {
             font-size: 1.5em;
             margin-bottom: 0.5em;
+            position: relative;
+        }
+
+        .service-item h3::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 2px;
+            background-color: #28a745;
+            margin: 0.5em auto;
         }
 
         .service-item p {
@@ -133,6 +177,7 @@
             padding: 0.5em 1em;
             border-radius: 5px;
             font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
         .service-item a:hover {
@@ -156,6 +201,10 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        footer p {
+            margin: 0.5em 0;
         }
 
         /* Responsive Design */
@@ -184,6 +233,7 @@
             <div class="hero-text">
                 <h1>Our Services</h1>
                 <p>Discover how we can help maintain, preserve, and enhance your properties.</p>
+                <a href="contact.html">Get in Touch</a>
             </div>
         </div>
         <nav>
@@ -222,7 +272,9 @@
         </section>
     </main>
     <footer>
-        <p>© 2025 GM Field Services LLC | <a href="contact.html">Contact Us</a></p>
+        <p>© 2025 GM Field Services LLC</p>
+        <p>Committed to excellence in property preservation and landscaping.</p>
+        <p><a href="contact.html">Contact Us</a></p>
     </footer>
 </body>
 </html>
