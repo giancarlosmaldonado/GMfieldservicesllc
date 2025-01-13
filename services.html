@@ -3,14 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - GM Field Services LLC</title>
+    <title>Our Services - GM Field Services LLC</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .logo {
+            max-width: 150px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 3em 1em;
+            background: #fff;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #003366;
+            margin-bottom: 1em;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .service-item {
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 1.5em;
+            margin: 1em;
+            text-align: center;
+            width: 30%;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .service-item img {
+            max-width: 100px;
+            margin-bottom: 1em;
+        }
+
+        .service-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .service-item p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 1em;
+        }
+
+        .service-item a {
+            display: inline-block;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .service-item a:hover {
+            background-color: #1e7e34;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #003366;
+            color: #fff;
+            padding: 1.5em 0;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-item {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/logo.png" alt="GM Field Services Logo" class="logo">
+            <img src="logo.png" alt="GM Field Services Logo" class="logo">
+        </div>
+        <div class="hero">
+            <img src="services-banner.jpg" alt="Our Services">
+            <div class="hero-text">
+                <h1>Our Services</h1>
+                <p>Discover how we can help maintain, preserve, and enhance your properties.</p>
+            </div>
         </div>
         <nav>
             <ul>
@@ -23,27 +168,32 @@
         </nav>
     </header>
     <main>
-        <h1>Our Services</h1>
         <section class="services">
-            <article>
-                <img src="images/maintenance-icon.png" alt="Maintenance Icon">
-                <h2>Property Maintenance</h2>
-                <p>We ensure your properties are secure and in compliance with industry standards.</p>
-            </article>
-            <article>
-                <img src="images/landscaping-icon.png" alt="Landscaping Icon">
-                <h2>Landscaping</h2>
-                <p>Professional landscaping services for a lasting impression.</p>
-            </article>
-            <article>
-                <img src="images/preservation-icon.png" alt="Preservation Icon">
-                <h2>Property Preservation</h2>
-                <p>Comprehensive solutions to keep your property in top shape.</p>
-            </article>
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <img src="maintenance-icon.png" alt="Maintenance Icon">
+                    <h3>Property Maintenance</h3>
+                    <p>We ensure your properties are secure and in compliance with industry standards.</p>
+                    <a href="contact.html">Get Started</a>
+                </div>
+                <div class="service-item">
+                    <img src="landscaping-icon.png" alt="Landscaping Icon">
+                    <h3>Landscaping</h3>
+                    <p>Beautiful landscaping solutions for residential and commercial properties.</p>
+                    <a href="contact.html">Learn More</a>
+                </div>
+                <div class="service-item">
+                    <img src="preservation-icon.png" alt="Preservation Icon">
+                    <h3>Property Preservation</h3>
+                    <p>Comprehensive solutions to keep your property in top shape.</p>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <p>© 2025 GM Field Services LLC</p>
+        <p>© 2025 GM Field Services LLC | <a href="contact.html">Contact Us</a></p>
     </footer>
 </body>
 </html>
