@@ -100,28 +100,12 @@
 
         .hero-text h1 {
             font-size: 2.5em;
-            margin-bottom: 1em;
+            margin-bottom: 0.5em;
         }
 
         .hero-text p {
             font-size: 1.2em;
             font-weight: 300;
-            margin-bottom: 1em;
-        }
-
-        .hero-text a {
-            display: inline-block;
-            background-color: #28a745;
-            color: #fff;
-            text-decoration: none;
-            padding: 0.75em 1.5em;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .hero-text a:hover {
-            background-color: #1e7e34;
         }
 
         /* Services Section */
@@ -152,13 +136,6 @@
             width: 30%;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.5s ease-in-out forwards;
-        }
-
-        .service-item:nth-child(even) {
-            background: #f7f7f7;
         }
 
         .service-item img {
@@ -193,22 +170,10 @@
             padding: 0.5em 1em;
             border-radius: 5px;
             font-weight: bold;
-            transition: background-color 0.3s ease;
         }
 
         .service-item a:hover {
             background-color: #1e7e34;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         /* Footer */
@@ -222,10 +187,45 @@
         footer a {
             color: #fff;
             text-decoration: none;
+            font-weight: bold;
         }
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Responsive Design: Adjustments for Mobile Screens */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5em 0;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8em;
+            }
+
+            .hero-text p {
+                font-size: 1em;
+            }
+
+            .hero-text a {
+                padding: 0.6em 1em;
+                font-size: 0.9em;
+            }
+
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-item {
+                width: 90%;
+            }
         }
     </style>
 </head>
