@@ -66,11 +66,11 @@
 
         .hero-text h1 {
             font-size: 3em;
-            margin-bottom: 1em; /* Increased spacing */
+            margin-bottom: 1em; /* Spaced out */
         }
 
         .hero-text p {
-            font-size: 1.5em; /* Larger tagline for better visibility */
+            font-size: 1.5em;
             font-weight: 300;
             margin: 0.5em 0 1em 0;
         }
@@ -127,12 +127,45 @@
             text-decoration: underline;
         }
 
+        /* Welcome Section */
+        .welcome {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2em 1em;
+            background-color: #f9f9f9;
+        }
+
+        .welcome-text {
+            flex: 1;
+            padding-right: 1em;
+        }
+
+        .welcome-text h2 {
+            font-size: 2em;
+            color: #003366;
+            margin-bottom: 0.5em;
+        }
+
+        .welcome-text p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .welcome img {
+            flex: 1;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
         /* Features Section */
         .features {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            padding: 3em 1em; /* Increased padding for spacing */
+            padding: 3em 1em;
             background: #fff;
         }
 
@@ -149,7 +182,7 @@
         }
 
         .features div img {
-            max-width: 100px; /* Larger icons */
+            max-width: 100px;
             margin-bottom: 1em;
         }
 
@@ -159,7 +192,7 @@
         }
 
         .features div h2 {
-            font-size: 1.8em; /* Slightly larger headings */
+            font-size: 1.8em;
             margin-bottom: 0.5em;
         }
 
@@ -168,34 +201,8 @@
             display: block;
             width: 50%;
             height: 2px;
-            background-color: #003366; /* Brand color for underlines */
+            background-color: #28a745;
             margin: 0.5em auto;
-        }
-
-        /* Welcome Section */
-        .welcome {
-            text-align: center;
-            padding: 2em 1em;
-            background-color: #f9f9f9;
-        }
-
-        .welcome h2 {
-            font-size: 2em;
-            color: #003366;
-            margin-bottom: 0.5em;
-        }
-
-        .welcome p {
-            font-size: 1.2em;
-            color: #555;
-            line-height: 1.5;
-        }
-
-        .welcome img {
-            max-width: 100%;
-            height: auto;
-            margin: 1em 0;
-            border-radius: 10px; /* Rounded corners for a softer look */
         }
 
         /* Footer */
@@ -203,7 +210,7 @@
             text-align: center;
             background: #003366;
             color: #fff;
-            padding: 1.5em 0; /* Improved padding */
+            padding: 1.5em 0;
             font-size: 0.9em;
         }
 
@@ -219,17 +226,18 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .welcome {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .welcome-text {
+                padding-right: 0;
+            }
+
             .features div {
                 width: 100%;
                 margin: 1em 0;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5em;
-            }
-
-            .hero-text .btn-primary {
-                padding: 0.5em 1em;
             }
         }
     </style>
@@ -259,9 +267,11 @@
     </header>
     <main>
         <section class="welcome">
-            <h2>Welcome to GM Field Services LLC</h2>
-            <p>At GM Field Services, we specialize in property preservation, maintenance, and landscaping tailored to meet the unique needs of the Puerto Rican market. Our commitment to excellence ensures that your properties remain in pristine condition, helping you stand out in the industry.</p>
-            <img src="servicing.jpg" alt="Welcome to GM Field Services">
+            <div class="welcome-text">
+                <h2>Welcome to GM Field Services LLC</h2>
+                <p>At GM Field Services, we specialize in property preservation, maintenance, and landscaping tailored to meet the unique needs of the Puerto Rican market. Our commitment to excellence ensures that your properties remain in pristine condition, helping you stand out in the industry.</p>
+            </div>
+            <img src="servicing.jpg" alt="Our Services in Action">
         </section>
         <section class="features">
             <div>
