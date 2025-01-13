@@ -103,11 +103,6 @@
             margin-bottom: 0.5em;
         }
 
-        .hero-text p {
-            font-size: 1.2em;
-            font-weight: 300;
-        }
-
         /* Contact Section */
         .contact {
             padding: 4em 1em;
@@ -174,6 +169,37 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5em 0;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8em;
+            }
+
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info, .contact-image {
+                width: 100%;
+                text-align: center;
+            }
+
+            .contact-image img {
+                max-width: 80%;
+                margin-top: 1em;
+            }
         }
     </style>
 </head>
