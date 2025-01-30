@@ -3,206 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - GM Field Services LLC</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>About Us - IT Puerto Rico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <style>
-        /* General Styling */
+        /* General Styles */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
             color: #333;
         }
 
+        /* Header */
         header {
-            background-color: #003366;
-            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
-
-        /* Navigation Bar Styling */
+        .company-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+        }
         nav {
-            background-color: #002a4a;
-            padding: 1em 0;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
+            gap: 15px;
+            flex: 2;
         }
-
-        nav ul li {
-            margin: 0 1.5em;
-        }
-
-        nav ul li a {
-            color: #fff;
+        nav a {
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1em;
-        }
-
-        nav ul li a:hover {
-            color: #28a745;
-        }
-
-        nav ul li a.active {
-            color: #28a745;
-            text-decoration: underline;
-        }
-
-        .logo-container {
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        .logo {
-            max-width: 150px;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            text-align: center;
-            padding: 4em 0;
-        }
-
-        .hero img {
-            width: 100%;
-            height: auto;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
-        .hero-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            z-index: 2;
-            text-align: center;
-        }
-
-        .hero-text h1 {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
-        }
-
-        /* About Us Section */
-        .about {
-            padding: 4em 1em;
-            background: #f9f9f9;
-        }
-
-        .about h2 {
-            text-align: center;
-            font-size: 2em;
-            color: #003366;
-            margin-bottom: 2em;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1em;
-            line-height: 1.6;
+            padding: 8px 15px;
             color: #333;
-            text-align: justify;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            background-color: #f1f1f1;
+            color: #007bff;
         }
 
-        .about-content p {
-            margin-bottom: 1.5em;
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                border-top: 1px solid #ddd;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+            nav.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .company-name {
+                flex: unset;
+            }
+        }
+
+        /* About Section */
+        #about {
+            padding: 100px 20px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        #about img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        #about h2 {
+            font-size: 3em;
+            color: #003366;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        #about p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        #about p span {
+            color: #ff3366;
+            font-weight: bold;
         }
 
         /* Footer */
         footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
             text-align: center;
-            background: #003366;
-            color: #fff;
-            padding: 1.5em 0;
         }
-
         footer a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
-            font-weight: bold;
         }
-
         footer a:hover {
             text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav ul li {
-                margin: 0.5em 0;
-            }
-
-            .hero-text h1 {
-                font-size: 1.8em;
-            }
-
-            .about-content {
-                font-size: 1em;
-                padding: 0 1em;
-            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="GM Field Services Logo" class="logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-            </ul>
+        <span class="company-name">IT Puerto Rico</span>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="products.html">Products</a>
+            <a href="sos.html">SOS</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <div class="hero">
-        <img src="about-banner.jpg" alt="About Us">
-        <div class="hero-text">
-            <h1>About Us</h1>
-        </div>
-    </div>
-    <main>
-        <section class="about">
-            <h2>Welcome to GM Field Services LLC</h2>
-            <div class="about-content">
-                <p>Welcome to GM Field Services LLC, your premier partner in property preservation throughout Puerto Rico. With a dedicated presence on the island, we serve a wide range of mortgage managers and are deeply familiar with the unique demands of managing assets here.</p>
-                <p>At GM Field Services LLC, we are committed to delivering exceptional service. Our team brings over five years of direct experience in property preservation, augmented by a legacy of family expertise in the field. This blend of personal and professional experience ensures that we handle every project with unparalleled skill and insight.</p>
-                <p>Our understanding of the local market and its specific challenges sets us apart. We navigate these complexities daily, providing tailored solutions that meet the exact needs of our clients and exceed their expectations.</p>
-                <p>Trust GM Field Services LLC to safeguard your assets with efficiency and expertise. We know Puerto Rico, and we're here to help you manage your properties with confidence and care.</p>
-            </div>
-        </section>
-    </main>
+    <section id="about">
+        <h2>About Us</h2>
+        <img src="aboutus.jpg" alt="About Us">
+        <p>Welcome to <span>IT Puerto Rico</span>, your trusted local partner in technology solutions. With over <span>15 years</span> of proven success, we are proud to serve businesses across Puerto Rico with comprehensive IT services designed to meet the unique needs of our community.</p>
+        <p>Our roots run deep in the world of technology—our family has been pioneers in the IT field on the island, dedicated to advancing innovation and crafting solutions that empower local businesses. This legacy, combined with our experience, passion, and expertise, makes us more than just a service provider. We’re your reliable partner in navigating the ever-evolving digital landscape.</p>
+        <p>At IT Puerto Rico, we specialize in a wide range of IT services, including network setup and management, cybersecurity solutions, cloud computing, and custom software development. We also provide IT consulting and on-demand remote support to ensure your business operates smoothly and securely.</p>
+        <p>What sets us apart is our commitment to the craft and our team of highly skilled professionals who are always ready to tackle any challenge. Whether you need proactive IT maintenance, assistance with hardware and software procurement, or tailored technology solutions, we’ve got you covered.</p>
+        <p>As a proud local business, we are dedicated to supporting the growth and success of our clients, big or small. When you choose IT Puerto Rico, you’re choosing a partner that understands your needs and shares your goals.</p>
+    </section>
     <footer>
-        <p>© 2025 GM Field Services LLC | <a href="contact.html">Contact Us</a></p>
+        <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+        <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
