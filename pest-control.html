@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pest Control - GM Field Services LLC</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #002a4a;
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1.5em;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            color: #28a745;
+        }
+
+        nav ul li a.active {
+            color: #28a745;
+            text-decoration: underline;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .logo {
+            max-width: 150px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 4em 0;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .pest-control {
+            padding: 4em 1em;
+            background: #f9f9f9;
+        }
+
+        .pest-control h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #003366;
+            margin-bottom: 2em;
+        }
+
+        .pest-control-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+            text-align: justify;
+        }
+
+        .pest-control-content p {
+            margin-bottom: 1.5em;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #003366;
+            color: #fff;
+            padding: 1.5em 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5em 0;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8em;
+            }
+
+            .pest-control-content {
+                font-size: 1em;
+                padding: 0 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="GM Field Services Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="pest-control.html" class="active">Pest Control</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <img src="pest-control-banner.jpg" alt="Pest Control Services">
+        <div class="hero-text">
+            <h1>Pest Control Services</h1>
+        </div>
+    </div>
+    <main>
+        <section class="pest-control">
+            <h2>Pest Control Solutions</h2>
+            <div class="pest-control-content">
+                <p>GM Field Services LLC provides **comprehensive pest control services** under **Category 8A**, adhering to all local law regulations.</p>
+                <p>Our licensed experts handle everything from **routine inspections** to **complete extermination solutions**, ensuring your property is safe and pest-free.</p>
+                <p>We specialize in the removal and prevention of:</p>
+                <ul>
+                    <li>Rodents (rats, mice)</li>
+                    <li>Termites</li>
+                    <li>Bed bugs</li>
+                    <li>Ants and cockroaches</li>
+                    <li>Mosquitoes</li>
+                    <li>Fleas and ticks</li>
+                </ul>
+                <p>Our environmentally friendly pest control solutions protect your property while ensuring the safety of your residents and employees.</p>
+                <p><strong>Schedule an inspection today and let us handle your pest control needs!</strong></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 GM Field Services LLC | <a href="contact.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>
